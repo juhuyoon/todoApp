@@ -3,9 +3,9 @@ require('dotenv').config();
 
 let sequelize;
 
-if (process.env.JAWS_HOST) {
-  sequelize = new Sequelize(process.env.JAWS_HOST);
-} else {
+// if (process.env.JAWS_HOST) {
+//   sequelize = new Sequelize(process.env.JAWS_HOST);
+// } else {
   sequelize = new Sequelize(
     process.env.DB_DATABASE,
     process.env.DB_USER,
@@ -16,6 +16,6 @@ if (process.env.JAWS_HOST) {
       port: 3306
     }
   );
-}
+// }
 
 module.exports = sequelize;
